@@ -1,0 +1,27 @@
+.footer {
+    background-color: #222222;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 16px 35px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    a:hover {
+        filter: brightness(0.8);
+    }
+
+    a:active {
+        filter: brightness(0.6);
+    }
+}

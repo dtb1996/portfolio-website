@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    
+    .navbar-left a,
+    .navbar-right a {
+        color: white;
+        padding: 16px 35px;
+        font-size: 17px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    a:active {
+        background-color: #5BADFF;
+        color: white;
+    }
+}
