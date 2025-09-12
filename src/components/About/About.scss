@@ -1,0 +1,30 @@
+@use "../../styles/variables.scss";
+
+.about {
+    padding: 35px 16px;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+
+    &-image {
+        padding-top: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+
+        &-image {
+            align-self: center;
+            max-width: 224px;
+        }
+
+        &-text {
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+}
