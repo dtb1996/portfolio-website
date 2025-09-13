@@ -12,13 +12,13 @@
     height: variables.$navbar-height;
     z-index: 100;
     
-    .navbar-left a,
-    .navbar-right a {
+    a {
         color: white;
         padding: 16px 35px;
         font-size: 17px;
         font-weight: 500;
         text-decoration: none;
+        cursor: pointer;
     }
 
     a:hover {
