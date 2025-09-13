@@ -1,0 +1,39 @@
+.project-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translateY(-2px);
+
+        .project-card-overlay {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    }
+
+    &-image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        display: block;
+    }
+
+    &-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.75rem 1rem;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        transition: background 0.2s;
+    }
+
+    &-title {
+        font-size: 1rem;
+        margin: 0;
+    }
+}
