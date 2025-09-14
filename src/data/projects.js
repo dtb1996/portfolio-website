@@ -42,7 +42,7 @@ Timer icons created by  [fjstudio - Flaticon](https://www.flaticon.com/free-icon
         category: "games",
         link: "",
         description: `
-The UE5 Item Inspector is a extendable system for inspecting in-game objects. Originally created as a shop item viewer for an independent client.
+The UE5 Item Inspector is an extendable system for inspecting in-game objects. Originally created as a shop item viewer for an independent client.
 
 ### Features
 
@@ -129,7 +129,7 @@ The goal of this project was to use basic web tools to make a simple game. Norma
 
 ### Reflection
 
-**Define game states early**: To reduce the complexity and size of the project, the demo snake controller uses the same snake object and game logic as the in-game snake. The major difference between the two modes in how the movement velocity is calculated since the demo snake needs to move without player input.
+**Define game states early**: Although I ran out of time to fully implement it, I quickly discovered that without keeping track of the current game state in a central location (ie: finite state machine), it can be difficult maintain code/logic organization. If I were to build this game again or refactor the existing code, I would define transition functions for each of the states to keep changes to the game variables, display, etc. well-organized and easier to follow.
 
 ### Roles
 
