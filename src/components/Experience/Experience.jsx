@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown"
 
 export default function Experience() {
     return (
-        <section className="experience">
+        <section id="experience" className="experience">
             <h1>Experience</h1>
             <div className="experience-col">
                 {experience.map((exp) => (
