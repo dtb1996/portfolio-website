@@ -53,6 +53,11 @@
                 max-height: 500px;
             }
         }
+
+        a.active {
+            background-color: #5BADFF;
+            color: white;
+        }
     }
 
     &-toggle {
