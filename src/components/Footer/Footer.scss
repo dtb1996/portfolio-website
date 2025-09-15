@@ -10,23 +10,27 @@
     align-items: center;
 
     p {
-        padding-left: 35px;
+        padding-left: 2rem;
     }
 
-    a {
-        text-decoration: none;
-        color: white;
-        padding-right: 35px;
-        font-size: 17px;
-        font-weight: 500;
-        cursor: pointer;
-    }
+    &-links {
+        display: flex;
+        gap: 1.5rem;
+        padding-right: 2rem;
 
-    a:hover {
-        filter: brightness(0.8);
-    }
+        a {
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            color: white;
+            transition: color 0.2s;
 
-    a:active {
-        filter: brightness(0.6);
+            &:hover {
+                color: #5BADFF
+            }
+
+            &:active {
+                filter: brightness(1.2);
+            }
+        }
     }
 }
