@@ -2,25 +2,28 @@
 
 .about {
     padding: 0 1rem;
-    text-align: left;
-    display: flex;
-    align-items: flex-start;
-    gap: 2.5rem;
+
+    p {
+        text-align: left;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-weight: 600;
+
+        &:hover {
+            color: #5BADFF;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .about {
-        flex-direction: column;
 
-        &-image {
-            align-self: center;
+        img {
             max-width: 224px;
-        }
-
-        &-text {
-            h1 {
-                text-align: center;
-            }
         }
     }
 }
