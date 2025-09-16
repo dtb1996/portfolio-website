@@ -1,6 +1,19 @@
 const experience = [
     {
         id: 1,
+        role: "Programmer, Designer - Super Mini Golf (PC | Independent)",
+        period: "Jan 2025 - Present",
+        description: `
+-   Implemented a turn-based multiplayer system in Unreal Engine 5 with replicated player state and scoring.
+-   Built a synchronized replay system replicating gameplay frames across clients.
+-   Developed a dynamic level streaming system for seamless stage transitions.
+-   Created a custom scoring framework with per-stage and cumulative course stats.
+-   Optimized network replication flows for multiplayer readiness, replays, and score updates.
+        `,
+        skills: ["Unreal Engine 5", "C++", "Blueprints", "Multiplayer/Replication"]
+    },
+    {
+        id: 2,
         role: "Unreal Engine UI Engineer - Canoo",
         period: "Apr 2022 - Jan 2025",
         description: `
@@ -12,20 +25,8 @@ const experience = [
         skills: ["Unreal Engine", "Visual Studio", "Qt/Qml", "C++", "Blueprints", "JavaScript", "Git", "Perforce", "Bitbucket"]
     },
     {
-        id: 2,
-        role: "Grocery Manager - Shaw's Supermarkets",
-        period: "Sep 2015 - Apr 2022",
-        description: `
--   Ordered for and managed inventory levels for grocery, dairy, and frozen departments, contributing to a sales increase of 46%.
--   Consulted with vendors from 20+ external companies to meet store inventory needs and receive credit for out-of-code products.
--   Accepted incoming warehouse and vendor deliveries, verifying invoices for accuracy.
--   Mentored team members leading to a department efficiency increase of 25%.
-        `,
-        skills: ["Management", "Receiving", "Customer Relations"]
-    },
-    {
         id: 3,
-        role: "Into the Knight (PC) - Independent",
+        role: "Programmer, Designer - Into the Knight (PC | Independent)",
         period: "Mar 2021 - May 2021",
         description: `
 -   Designed and developed all game functionality, including gameplay, UI, and visual effects.

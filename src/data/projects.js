@@ -15,13 +15,16 @@ const projects = [
         link: "",
         video: "https://www.youtube.com/watch?v=LzQzw4D6lqI",
         description: `
-Super Mini Golf is a mashup of Mini Golf and Super Monkey Ball made in UE5. Instead of hitting the ball with a golf club, the stage is tilted to move the ball. This project is still in active development.
+Super Mini Golf is a mashup of Mini Golf and Super Monkey Ball made in Unreal Engine 5. Instead of striking the ball, the stage is tilted to guide it through dynamic, physics-driven courses. The game supports turn-based multiplayer, synchronized instant replays, and streamed stage transitions.
 
 ### Features
 
--   Custom camera tilt to give the illusion of tilting the stage to move the ball
--   Custom pawn movement using a combination of torque and direct force to give the player full control and make navigation feel responsive
--   UI layering system designed to make adding and removing visual widgets easy
+-   **Turn-based multiplayer system:** Designed and implemented custom turn flow logic in UE5, including retries, countdowns, and end-of-turn transitions, replicated for multiplayer consistency.
+-   **Replay system:** Built a modular replay recorder component that tracks gameplay events, replicates frames to all clients, and supports synchronized instant replays.
+-   **Dynamic stage loading:** Implemented Level Streaming logic for stage transitions, supporting dynamic actors like moving platforms while preserving game state.
+-   **Scoring and stats framework:** Designed per-stage and cumulative scoring structures (coins, score, time, out-of-bounds, retries) with live updates and end-of-stage summaries.
+-   **Network and Replication:** Debugged and optimized multiplayer flows (stage readiness, replay sync, stat updates) to ensure reliable behavior across server and clients.
+-   **Gameplay systems:** Implemented interactive goals, collectible tracking, and contextual input mapping to manage active/inactive players fairly.
 
 ### Roles
 
