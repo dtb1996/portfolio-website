@@ -6,7 +6,11 @@ export default function ProjectModal({ project, onClose }) {
     return (
         <div className="project-modal-backdrop" onClick={onClose}>
             <div className="project-modal" onClick={(e) => e.stopPropagation()}>
-                <button className="project-modal-close" onClick={onClose}>x</button>
+                <button className="project-modal-close" onClick={onClose}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <h2>{project.title}</h2>
 
                 <div className="project-modal-media">
