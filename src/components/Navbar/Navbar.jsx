@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import "./Navbar.scss"
-import ThemeToggle from "./ThemeToggle/ThemeToggle"
+import ThemeToggle from "../ThemeToggle/ThemeToggle"
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)

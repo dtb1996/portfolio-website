@@ -1,8 +1,8 @@
 import "./Projects.scss"
 import projects from "../../data/projects"
-import ProjectCard from "./ProjectCard/ProjectCard"
+import ProjectCard from "../../components/ProjectCard/ProjectCard"
 import { useEffect, useState } from "react"
-import ProjectModal from "./ProjectModal/ProjectModal"
+import ProjectModal from "../../components/ProjectModal/ProjectModal"
 
 export default function Projects() {
     const [showModal, setShowModal] = useState(false)
