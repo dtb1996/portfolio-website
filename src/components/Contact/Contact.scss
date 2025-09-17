@@ -10,17 +10,15 @@
             align-items: center;
             gap: 0.5rem;
             font-size: 1.3rem;
-            color: white;
-            text-decoration: none;
-            transition: color 0.2s;
 
             svg {
                 font-size: 1.5rem;
             }
+        }
 
-            &:hover {
-                color: #5BADFF
-            }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }

@@ -1,1 +1,30 @@
-$navbar-height: 60px;
+// Dark theme (default)
+:root {
+    --color-bg-dark: hsl(40, 7%, 4%);
+    --color-bg: hsl(40, 7%, 8%);
+    --color-bg-light: hsl(0, 0%, 13%);
+    --color-bg-highlight: hsl(0, 0%, 19%);
+    --color-text: hsl(0, 0%, 95%);
+    --color-text-muted: hsl(0, 0%, 70%);
+    --color-primary: hsl(210, 100%, 68%);
+    
+    --ff: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    --h1: bold 1.125rem/1.4em var(-ff);
+    --h2: bold 1rem/1.4em var(-ff);
+    --p: 1.125rem/1.4em var(-ff);
+    --p2: 0.875/1.4em var(-ff);
+
+    --navbar-height: 64px;
+}
+
+// Light theme
+[data-theme="light"] {
+    --color-bg-dark: hsl(40, 7%, 87%);
+    --color-bg: hsl(40, 7%, 92%);
+    --color-bg-light: hsl(0, 0%, 96%);
+    --color-bg-highlight: hsl(0, 0%, 81%);
+    --color-text: hsl(0, 0%, 5%);
+    --color-text-muted: hsl(0, 0%, 30%);
+    --color-primary: hsl(210, 100%, 68%);
+}

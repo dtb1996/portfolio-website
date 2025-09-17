@@ -12,7 +12,7 @@
 }
 
 .project-modal {
-    background: #222222;
+    background: var(--color-bg-light);
     border-radius: 1rem;
     padding: 2rem;
     max-width: 1400px;
@@ -78,7 +78,7 @@
         span {
             height: 3px;
             width: 30px;
-            background: white;
+            background: var(--color-text);
             margin: 4px 0;
             border-radius: 2px;
         }
@@ -113,6 +113,16 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
         white-space: normal;
+        color: var(--color-text-muted);
+
+        a {
+            font-weight: 500;
+        }
+
+        strong,
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text);
+        }
     }
 }
 

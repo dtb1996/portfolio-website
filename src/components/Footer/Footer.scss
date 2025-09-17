@@ -1,5 +1,5 @@
 .footer {
-    background-color: #222222;
+    background-color: var(--color-bg-light);
     position: fixed;
     width: 100vw;
     z-index: 100;
@@ -17,20 +17,6 @@
         display: flex;
         gap: 1.5rem;
         padding-right: 2rem;
-
-        a {
-            gap: 0.5rem;
-            font-size: 1.2rem;
-            color: white;
-            transition: color 0.2s;
-
-            &:hover {
-                color: #5BADFF
-            }
-
-            &:active {
-                filter: brightness(1.2);
-            }
-        }
+        font-size: 1.2rem;
     }
 }

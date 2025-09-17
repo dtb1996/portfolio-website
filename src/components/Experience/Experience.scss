@@ -3,15 +3,22 @@
     flex-direction: column;
     align-items: center;
 
-    &-col {
+    &-list {
         text-align: left;
-        max-width: 700px;
+        max-width: 1200px;
 
-        &-entry-header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+        &-entry {
+            &-header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            p,
+            &-description {
+                color: var(--color-text-muted);
+            }
         }
     }
 
@@ -19,15 +26,26 @@
         margin-top: 1.5rem;
         padding: 1rem 1.5rem;
         background-color: transparent;
-        border-color: #FFF;
+        border: 2px solid var(--color-text);
         border-radius: 2rem;
-        border-width: 0.125rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: var(--color-text);
+
+            a {
+                color: var(--color-bg-dark);
+            }
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
 
         a {
-            text-decoration: none;
-            color: #FFF;
             font-size: 1rem;
-            font-weight: 400;
+            font-weight: 600;
         }
     }
 }

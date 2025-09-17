@@ -1,5 +1,3 @@
-@use "./styles/variables.scss";
-
 #root {
   max-width: 1280px;
   margin: 2rem auto 5rem;
@@ -12,6 +10,6 @@ html {
 }
 
 section {
-  scroll-margin-top: variables.$navbar-height;
+  scroll-margin-top: var(--navbar-height);
   padding-top: 1rem;
 }

@@ -1,11 +1,11 @@
+@use "./styles/variables.scss";
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--ff);
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #161513;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,5 +17,21 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #161513;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+      color: var(--color-primary)
+  }
+
+  &:active {
+      filter: brightness(1.2);
+  }
 }

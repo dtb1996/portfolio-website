@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import "./Navbar.scss"
+import ThemeToggle from "./ThemeToggle/ThemeToggle"
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -78,6 +79,7 @@ export default function Navbar() {
                 >
                     Contact
                 </a>
+                <ThemeToggle />
             </div>
         </nav>
     )

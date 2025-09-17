@@ -6,17 +6,17 @@ export default function Experience() {
     return (
         <section id="experience" className="experience">
             <h1>Experience</h1>
-            <div className="experience-col">
+            <div className="experience-list">
                 {experience.map((exp) => (
                     <div
-                        className="experience-col-entry"
+                        className="experience-list-entry"
                         key={exp.id}
                     >
-                        <div className="experience-col-entry-header">
+                        <div className="experience-list-entry-header">
                             <h3>{exp.role}</h3>
                             <p>{exp.period}</p>
                         </div>
-                        <div className="experience-col-entry-description">
+                        <div className="experience-list-entry-description">
                             <ReactMarkdown>{exp.description}</ReactMarkdown>
                         </div>
                     </div>

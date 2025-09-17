@@ -5,25 +5,16 @@
 
     p {
         text-align: left;
+        color: var(--color-text-muted);
     }
 
     a {
-        color: white;
-        text-decoration: none;
-        transition: color 0.2s;
         font-weight: 600;
-
-        &:hover {
-            color: #5BADFF;
-        }
     }
 }
 
 @media (max-width: 768px) {
-    .about {
-
-        img {
-            max-width: 224px;
-        }
+    .about img {
+        max-width: 224px;
     }
 }
