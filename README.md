@@ -39,11 +39,12 @@ npm run dev
 
 ```bash
 src/
-|-- assets/          # Static images (avatar, project thumbnails)
-|-- components/      # Reusable UI components (Navbar, ProjectModal, etc.)
-|-- data/            # Individual Experience and Project data (title, details, markdown, etc.)
-|-- styles/          # Global styles
-|-- App.jsx/         # Main app layout
+├── assets/          # Static images (avatar, project thumbnails)
+├── components/      # Reusable UI components (Navbar, ProjectModal, etc.)
+├── data/            # Individual Experience and Project data (title, details, markdown, etc.)
+├── sections/        # Page sections (About, Contact, Projects, Experience)
+├── styles/          # Global styles
+└── App.jsx/         # Main app layout
 ```
 
 ## Theming
