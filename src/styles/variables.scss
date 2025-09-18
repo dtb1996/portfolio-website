@@ -1,7 +1,7 @@
 // Dark theme (default)
 :root {
-    --color-bg-dark: hsl(40, 7%, 4%);
-    --color-bg: hsl(40, 7%, 8%);
+    --color-bg-dark: hsl(40, 7%, 8%);
+    --color-bg: hsl(40, 7%, 10%);
     --color-bg-light: hsl(0, 0%, 13%);
     --color-bg-highlight: hsl(0, 0%, 19%);
     --color-text: hsl(0, 0%, 95%);
@@ -21,7 +21,7 @@
 // Light theme
 [data-theme="light"] {
     --color-bg-dark: hsl(40, 7%, 87%);
-    --color-bg: hsl(40, 7%, 92%);
+    --color-bg: hsl(40, 7%, 90%);
     --color-bg-light: hsl(0, 0%, 96%);
     --color-bg-highlight: hsl(0, 0%, 81%);
     --color-text: hsl(0, 0%, 5%);
