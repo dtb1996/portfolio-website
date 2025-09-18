@@ -6,7 +6,7 @@ export default function Footer() {
 
     return (
         <footer className="footer">
-            <p>Copyright &copy; {currentYear} Rolling Pixels. All rights reserved.</p>
+            <p className="footer-copyright">Copyright &copy; {currentYear} Rolling Pixels. All rights reserved.</p>
             <div className="footer-links">
                 <a href="mailto:bellefeuilledillon@gmail.com" target="blank" rel="noopener noreferrer">
                     <FaEnvelope />

@@ -10,13 +10,13 @@ export default function Contact() {
                     <FaEnvelope /> bellefeuilledillon@gmail.com
                 </a>
                 <a href="https://www.linkedin.com/in/dillon-bellefeuille/" target="blank" rel="noopener noreferrer">
-                    <FaLinkedin /> LinkedIn
+                    <FaLinkedin /> dillon-bellefeuille
                 </a>
                 <a href="https://github.com/dtb1996" target="blank" rel="noopener noreferrer">
-                    <FaGithub /> GitHub
+                    <FaGithub /> dtb1996
                 </a>
                 <a href="https://dillionaire.itch.io/" target="blank" rel="noopener noreferrer">
-                    <FaItchIo /> Itch.io
+                    <FaItchIo /> dillionaire
                 </a>
             </div>
         </section>

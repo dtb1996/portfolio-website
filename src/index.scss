@@ -13,8 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--color-bg-dark);
@@ -33,5 +38,21 @@ a {
 
   &:active {
       filter: brightness(1.2);
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-position: inside;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none !important;
   }
 }

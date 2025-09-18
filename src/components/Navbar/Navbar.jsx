@@ -79,7 +79,9 @@ export default function Navbar() {
                 >
                     Contact
                 </a>
-                <ThemeToggle />
+                <div className="navbar-right-theme-toggle">
+                    <ThemeToggle />
+                </div>
             </div>
         </nav>
     )

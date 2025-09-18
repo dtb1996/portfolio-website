@@ -4,8 +4,10 @@
     align-items: center;
 
     &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
         text-align: left;
-        max-width: 1200px;
 
         &-entry {
             &-header {
@@ -17,13 +19,14 @@
 
             p,
             &-description {
+                margin-top: 0.5rem;
                 color: var(--color-text-muted);
             }
         }
     }
 
     &-resume-button {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         padding: 1rem 1.5rem;
         background-color: transparent;
         border: 2px solid var(--color-text);
@@ -46,6 +49,13 @@
         a {
             font-size: 1rem;
             font-weight: 600;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &-list-entry-header {
+            flex-direction: column;
+            text-align: center;
         }
     }
 }

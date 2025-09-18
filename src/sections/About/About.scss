@@ -1,9 +1,12 @@
-@use "../../styles/variables.scss";
-
 .about {
-    padding: 0 1rem;
+    &-details {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
 
     p {
+        max-width: 1000px;
         text-align: left;
         color: var(--color-text-muted);
     }
