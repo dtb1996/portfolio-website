@@ -1,5 +1,6 @@
 import "./About.scss"
 import profilePic from "../../assets/avatar.png"
+import Contact from "../../components/Contact/Contact"
 
 export default function About() {
     return (
@@ -18,6 +19,9 @@ export default function About() {
 
                     I'm always open to new opportunities. Feel free to get in touch through any of the links below.
                 </p>
+            </div>
+            <div className="about-links">
+                <Contact />
             </div>
         </section>
     )

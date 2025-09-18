@@ -72,13 +72,6 @@ export default function Navbar() {
                 >
                     Resume
                 </a>
-                <a
-                    href="#contact"
-                    className={activeSection === "contact" ? "active" : ""}
-                    onClick={() => setMenuOpen(false)}
-                >
-                    Contact
-                </a>
                 <div className="navbar-right-theme-toggle">
                     <ThemeToggle />
                 </div>

@@ -3,9 +3,8 @@ import "./Contact.scss"
 
 export default function Contact() {
     return (
-        <section id="contact" className="contact">
-            <h1>Contact Me</h1>
-            <div className="contact-links">
+        <>
+            <div className="contact">
                 <a href="mailto:bellefeuilledillon@gmail.com" target="blank" rel="noopener noreferrer">
                     <FaEnvelope /> bellefeuilledillon@gmail.com
                 </a>
@@ -19,6 +18,6 @@ export default function Contact() {
                     <FaItchIo /> dillionaire
                 </a>
             </div>
-        </section>
+        </>
     )
 }
