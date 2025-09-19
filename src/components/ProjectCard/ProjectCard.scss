@@ -5,6 +5,7 @@
     border-radius: 1rem;
     overflow: hidden;
     transition: transform 0.2s;
+    box-shadow: var(--shadow-elevation-1);
 
     &:hover {
         transform: translateY(-2px);
@@ -35,5 +36,13 @@
     &-title {
         font-size: 1rem;
         margin: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none !important;
+        
+        &-overlay {
+            transition: none !important;
+        }
     }
 }
