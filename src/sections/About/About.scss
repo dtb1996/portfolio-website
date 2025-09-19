@@ -5,6 +5,11 @@
         margin-top: 1rem;
     }
 
+    img {
+        border-radius: 50%;
+        box-shadow: var(--shadow-elevation-1);
+    }
+
     p {
         max-width: 1000px;
         text-align: left;

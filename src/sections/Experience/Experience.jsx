@@ -46,6 +46,8 @@ export default function Experience() {
                     </div>
                 </div>
             </div>
+
+            {/* Download Resume Button */}
             <button className="experience-resume-button">
                 <a href="/dillon_bellefeuille_resume.pdf" target="_blank" rel="noopener noreferrer" download="dillon_bellefeuille_resume.pdf">
                     Download Resume
