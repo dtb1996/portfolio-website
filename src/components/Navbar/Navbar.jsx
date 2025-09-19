@@ -7,29 +7,67 @@ export default function Navbar() {
     const [activeSection, setActiveSection] = useState("about")
 
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = document.querySelectorAll("section")
-            let current = ""
+        const sections = Array.from(document.querySelectorAll("section[id]"));
+        if (!sections.length) return;
 
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100
-                const sectionHeight = section.clientHeight
+        // Read navbar height from CSS variable (fallback to 64)
+        const raw = getComputedStyle(document.documentElement).getPropertyValue("--navbar-height") || "64px";
+        const navbarHeight = parseInt(raw, 10) || 64;
+        const rootMargin = `-${navbarHeight}px 0px 0px 0px`;
 
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute("id")
-                }
-            })
+        // Map to hold the latest intersectionRatio for each section
+        const ratios = new Map(sections.map((s) => [s.id, 0]));
 
-            if (current) {
-                setActiveSection(current)
+        const observer = new IntersectionObserver(
+        (entries) => {
+            // Update ratios for changed entries
+            entries.forEach((entry) => {
+                ratios.set(entry.target.id, entry.intersectionRatio);
+            });
+
+            // Pick the section with the largest visible ratio
+            let maxId = null;
+            let maxRatio = -1;
+            ratios.forEach((ratio, id) => {
+            if (ratio > maxRatio) {
+                maxRatio = ratio;
+                maxId = id;
             }
-        }
+            });
 
-        window.addEventListener("scroll", handleScroll)
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
+            // Fallback: if none intersecting (maxRatio === 0), prefer the last visible by boundingClientRect
+            if (!maxId) {
+                const inView = sections.find((s) => {
+                    const r = s.getBoundingClientRect();
+                    return r.top < window.innerHeight && r.bottom > 0;
+                });
+                maxId = inView ? inView.id : sections[0].id;
+            }
+
+            if (maxId) setActiveSection(maxId);
+        },
+        {
+            root: null,
+            rootMargin,
+            threshold: [0, 0.25, 0.5, 0.75, 1],
         }
-    }, [])
+        );
+
+        sections.forEach((s) => observer.observe(s));
+
+        // Ensure bottom-of-page selects last section
+        const onScroll = () => {
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+            setActiveSection(sections[sections.length - 1].id);
+        }
+        };
+        window.addEventListener("scroll", onScroll);
+
+        return () => {
+        observer.disconnect();
+        window.removeEventListener("scroll", onScroll);
+        };
+    }, []);
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen)
