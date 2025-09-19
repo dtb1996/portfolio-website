@@ -8,9 +8,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  # -----------------
-  # LINT JOB
-  # -----------------
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -22,9 +19,6 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-  # -----------------
-  # TEST JOB
-  # -----------------
   test:
     runs-on: ubuntu-latest
     needs: lint
@@ -37,9 +31,6 @@ jobs:
       - name: Run tests
         run: npm test -- --ci --watchAll=false
 
-  # -----------------
-  # BUILD JOB
-  # -----------------
   build:
     runs-on: ubuntu-latest
     needs: [lint, test]
@@ -55,12 +46,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: site-build
-          path: dist # or build if using CRA
+          path: dist
 
-  # -----------------
-  # DEPLOY JOB (only on main)
-  # -----------------
-  deploy:
+  deploy-production:
     runs-on: ubuntu-latest
     needs: build
     if: github.ref == 'refs/heads/main'
@@ -79,3 +67,44 @@ jobs:
           port: ${{ secrets.HOSTINGER_PORT }}
           username: ${{ secrets.HOSTINGER_USERNAME }}
           password: ${{ secrets.HOSTINGER_PASSWORD }}
+
+  deploy-preview:
+    needs: build
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Deploy to GitHub Pages (Preview)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          destination_dir: pr-${{ github.event.pull_request.number }}
+          
+      - name: Comment Preview Link on PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            🚀 Preview available:  
+            🔗 https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/
+
+  cleanup-preview:
+    if: github.event.pull_request.merged == true || github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove PR Preview from GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./empty
+          destination_dir: pr-${{ github.event.pull_request.number }}
+
+      - name: Comment Cleanup on PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            🧹 Preview for PR #${{ github.event.pull_request.number }} has been removed.
