@@ -58,15 +58,26 @@ jobs:
           name: site-build
           path: dist
 
-      - name: Upload files to Hostinger
-        uses: mradilla/hostinger-deploy@v1
+      - name: Clean remote public_html
+        uses: appleboy/ssh-action@v1.0.0
         with:
-          domain: dillonbellefeuille.com
-          source-path: dist
           host: ${{ secrets.HOSTINGER_HOST }}
           port: ${{ secrets.HOSTINGER_PORT }}
           username: ${{ secrets.HOSTINGER_USERNAME }}
-          password: ${{ secrets.HOSTINGER_PASSWORD }}
+          key: ${{ secrets.HOSTINGER_KEY }}
+          script: |
+            rm -rf ${{ secrets.HOSTINGER_TARGET_PATH }}/*
+
+      - name: Upload files to Hostinger
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOSTINGER_HOST }}
+          port: ${{ secrets.HOSTINGER_PORT }}
+          username: ${{ secrets.HOSTINGER_USERNAME }}
+          key: ${{ secrets.HOSTINGER_KEY }}
+          source: "dist/**"
+          target: ${{ secrets.HOSTINGER_TARGET_PATH }}
+          strip_components: 1
 
   deploy-preview:
     needs: build
@@ -89,8 +100,8 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: |
-            🚀 Preview available:  
-            🔗 https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/
+            Preview available:  
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/
 
   cleanup-preview:
     if: github.event.pull_request.merged == true || github.event.action == 'closed'
@@ -107,4 +118,4 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: |
-            🧹 Preview for PR #${{ github.event.pull_request.number }} has been removed.
+            Preview for PR #${{ github.event.pull_request.number }} has been removed.
