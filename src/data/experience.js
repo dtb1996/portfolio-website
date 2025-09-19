@@ -38,4 +38,20 @@ const experience = [
     },
 ]
 
-export default experience
+const skills = {
+    gameDev: [
+        "Unreal Engine 4/5 (C++, Blueprints)",
+        "Gameplay Systems (Inventory, Quest, Replay)",
+        "Multiplayer Networking and Replication",
+        "Physics-based mechanics",
+        "UI Engineering (UMG, Common UI, CustomWidgets)"
+    ],
+    webDev: [
+        "React.js (Hooks, State Management)",
+        "UI/UX Engineering (Responsive Design, Accessibility)",
+        "Modern CSS (SCSS, Flexbox, Grid)",
+        "Qt (QML, Custom Components)"
+    ]
+}
+
+export { experience, skills }
