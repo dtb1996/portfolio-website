@@ -95,6 +95,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           destination_dir: pr-${{ github.event.pull_request.number }}
+          force_orphan: true
           
       - name: Comment Preview Link on PR
         uses: marocchino/sticky-pull-request-comment@v2
