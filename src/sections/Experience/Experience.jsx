@@ -47,10 +47,10 @@ export default function Experience() {
                 </div>
             </div>
 
-            {/* Download Resume Button */}
+            {/* View Resume Button */}
             <button className="experience-resume-button">
-                <a href="/dillon_bellefeuille_resume.pdf" target="_blank" rel="noopener noreferrer" download="dillon_bellefeuille_resume.pdf">
-                    Download Resume
+                <a href="/dillon_bellefeuille_resume.pdf" target="_blank" rel="noopener noreferrer">
+                    View Resume
                 </a>
             </button>
         </section>
