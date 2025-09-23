@@ -3,6 +3,8 @@
 This is my personal developer portfolio built with **React**, designed to highlight my projects, skills, and experience.
 It features a responsive design, dark/light theme support, and a clean UI.
 
+Check out the live website here: [dillonbellefeuille.com](https://dillonbellefeuille.com)
+
 ## Features
 
 - **Responsive design:** works seamlessly on desktop and mobile.
@@ -48,6 +50,7 @@ src/
 ```
 
 ## Theming
+
 - Uses **CSS variables** for colors and theming.
 - Default mode is **dark**, but checks system preference (`prefers-color-scheme`) on first load.
 - Users can toggle between themes manually (saved to local storage).
