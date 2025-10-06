@@ -30,14 +30,29 @@ export default function Projects() {
     return (
         <section id="projects" className="projects">
             <h1>Projects</h1>
+            <h3>Game Development</h3>
             <div className="projects-grid">
-                {projects.map((project) => (
-                    <ProjectCard
-                        key={project.id}
-                        {...project}
-                        onClick={() => openProjectModal(project)}
-                    />
-                ))}
+                {projects
+                    .filter((project) => project.category === "games")
+                    .map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            {...project}
+                            onClick={() => openProjectModal(project)}
+                        />
+                    ))}
+            </div>
+            <h3>Web Development</h3>
+            <div className="projects-grid">
+                {projects
+                    .filter((project) => project.category === "web")
+                    .map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            {...project}
+                            onClick={() => openProjectModal(project)}
+                        />
+                    ))}
             </div>
             {showModal && selectedProject && (
                 <ProjectModal project={selectedProject} onClose={closeProjectModal} />
