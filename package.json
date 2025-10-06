@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
-        "format": "prettier --write",
+        "format": "prettier --write .",
         "preview": "vite preview",
         "test": "echo \"No tests configured\" && exit 0"
     },
