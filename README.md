@@ -16,8 +16,10 @@ Check out the live website here: [dillonbellefeuille.com](https://dillonbellefeu
 ## Tech Stack
 
 - **Front End:** [React](https://react.dev/), [ReactIcons](https://github.com/react-icons/react-icons)
-- **Styling:** SCSS, CSS Variables for theming
+- **Styling:** [SCSS](https://sass-lang.com/), CSS Variables for theming
 - **Tooling:** [Vite](https://vite.dev/) build tool
+- **Linting & Formatting:** [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
+- **CI/CD:** GitHub Actions
 
 ## Getting Started
 

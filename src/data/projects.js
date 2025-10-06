@@ -1,10 +1,12 @@
-import thumb1 from "../assets/projects/super-mini-golf.png";
-import thumb2 from "../assets/projects/ue5-item-inspector-plugin-icon.png";
-import thumb3 from "../assets/projects/canoo-infotainment-icon.png";
-import thumb4 from "../assets/projects/ue5-inventory-plugin-icon.png";
-import thumb5 from "../assets/projects/lumi-snake-icon.png";
-import thumb6 from "../assets/projects/into-the-knight-icon.png";
-import thumb7 from "../assets/projects/dodgeball-x-icon.png";
+import thumb1 from "../assets/projects/super-mini-golf.png"
+import thumb2 from "../assets/projects/ue5-item-inspector-plugin-icon.png"
+import thumb3 from "../assets/projects/canoo-infotainment-icon.png"
+import thumb4 from "../assets/projects/ue5-inventory-plugin-icon.png"
+import thumb5 from "../assets/projects/lumi-snake-icon.png"
+import thumb6 from "../assets/projects/into-the-knight-icon.png"
+import thumb7 from "../assets/projects/dodgeball-x-icon.png"
+import thumb8 from "../assets/projects/web-personal-dashboard.png"
+import thumb12 from "../assets/projects/web-portfolio-website.png"
 
 const projects = [
     {
@@ -36,7 +38,7 @@ UI Designs by Umar Ali
 Timer icons created by  [fjstudio - Flaticon](https://www.flaticon.com/free-icons/timer)  
 "Golf Ball" by  [Safina Irani](https://skfb.ly/oAVrx)  is licensed under Creative Commons Attribution  
 "Lowpoly gold coin" by  [BlobFortress](https://skfb.ly/69CRK)  is licensed under Creative Commons Attribution
-        `
+        `,
     },
     {
         id: 2,
@@ -60,7 +62,7 @@ Programmer, Designer
 ### Attribution
 
 "Carpenter's Workshop" environment and models by  [Leartes Studios](https://cosmos.leartesstudios.com/environments?service=leartes)
-        `
+        `,
     },
     {
         id: 3,
@@ -81,7 +83,7 @@ Worked as part of the HMI team responsible for implementing new features and mai
 ### Role
 
 UI Engineer
-        `
+        `,
     },
     {
         id: 4,
@@ -104,7 +106,7 @@ Source code available on  [GitHub](https://github.com/dtb1996/UE5-Inventory-Mana
 ### Roles
 
 Programmer, Designer
-        `
+        `,
     },
     {
         id: 5,
@@ -137,7 +139,7 @@ The goal of this project was to use basic web tools to make a simple game. Norma
 ### Roles
 
 Programmer, Designer
-        `
+        `,
     },
     {
         id: 6,
@@ -152,7 +154,7 @@ View game on  [Steam](https://store.steampowered.com/app/1591410/Into_the_Knight
 ### Roles
 
 Programmer, Designer, Music
-        `
+        `,
     },
     {
         id: 7,
@@ -169,7 +171,93 @@ Windows build available on  [itch.io](https://dillionaire.itch.io/dodgeball-x).
 ### Roles
 
 Programmer, Designer, Music
-        `
+        `,
+    },
+    {
+        id: 8,
+        title: "React Personal Dashboard",
+        thumbnail: thumb8,
+        category: "web",
+        link: "",
+        video: "",
+        description: `
+A customizable and responsive React-based dashboard that brings together useful everyday widgets — including weather, news, jokes, todos, and a calculator — into a cohesive, modern interface. Designed for both usability and aesthetics, it demonstrates clean component architecture, SCSS module styling, API integration, and responsive UI patterns.
+
+### Live Demo
+
+[https://dillon-personal-dashboard.netlify.app/](https://dillon-personal-dashboard.netlify.app/)
+
+### Link to Repo
+
+[dtb1996/personal-dashboard](https://github.com/dtb1996/personal-dashboard)
+
+### Features
+
+-   **Reusable Card System:** all dashboard widgets use a shared <Card /> component for styling.
+-   **Weather Card:** fetches live weather data using [OpenWeather API](https://openweathermap.org/api).
+-   **Todo Card:** add, remove, and mark tasks as complete — automatically saved in LocalStorage.
+-   **Calculator Card:** simple math calculator.
+-   **Joke Card:** fetches random jokes from [JokeAPI](https://jokeapi.dev/).
+-   **Stock Tracker Card:** displays live stock data from [Financial Modeling Prep](https://site.financialmodelingprep.com/).
+-   **News Feed:** fetches top headlines via [NewsAPI](https://newsapi.org/).
+-   **Theme Toggle:** allows switching between multiple visual themes.
+-   **Responsive Layout:** adaptive sidebar, sticky header/footer, and grid/flexbox handling.
+-   **CI/CD:** GitHub Actions pipeline for linting, testing, building, and deploying to Netlify.
+-   **Automated Screenshots:** Playwright test captures dashboard images for documentation.
+
+### Tech Stack
+
+-   **Front End:** [React](https://react.dev/), [ReactIcons](https://github.com/react-icons/react-icons), [Vite](https://vite.dev/)
+-   **Styling:** [SCSS Modules](https://sass-lang.com/), CSS Variables
+-   **Documentation:** [Playwright](https://playwright.dev/) for automated UI screenshots
+-   **CI/CD:** GitHub Actions, [Netlify](https://www.netlify.com/)
+-   **Serverless Backend:** Netlify Functions
+-   **Code Quality:** [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
+-   **APIs:** [OpenWeather API](https://openweathermap.org/api), [NewsAPI](https://newsapi.org/), [JokeAPI](https://jokeapi.dev/), [Financial Modeling Prep](https://site.financialmodelingprep.com/)
+-   **API Integration:** Serverless functions on Netlify handle requests to third-party APIs securely:
+    - **Weather:** OpenWeather API via netlify/functions/weather.js
+    - **Stocks:** Financial Modeling Prep API via netlify/functions/stocks.js
+    - **News:** NewsAPI via netlify/functions/news.js
+
+### Highlights
+
+-   Demonstrates **modular React architecture** and component reuse
+-   Uses **environment variables and API keys securely** through Netlify.
+-   Implements **error handling and loading states** for all API calls.
+-   Provides a solid base for expanding into a personalized productivity dashboard.
+        `,
+    },
+    {
+        id: 12,
+        title: "React Portfolio Website",
+        thumbnail: thumb12,
+        category: "web",
+        link: "https://dillonbellefeuille.com/",
+        video: "",
+        description: `
+This is my personal developer portfolio built with **React**, designed to highlight my projects, skills, and experience.
+It features a responsive design, dark/light theme support, and a clean UI.
+
+### Link to Repo
+
+[dtb1996/portfolio-website](https://github.com/dtb1996/portfolio-website)
+
+## Features
+
+- **Responsive design:** works seamlessly on desktop and mobile.
+- **Dark/Light themes:** checks the user's system preference on initial load.
+- **Project showcase:** modal view with detailed markdown descriptions.
+- **Resume and Experience:** quick access to background and skills with the option to view or download a pdf version.
+- **Contact section:** direct links to Email and profiles on LinkedIn, GitHub, and itch.io.
+
+## Tech Stack
+
+- **Front End:** [React](https://react.dev/), [ReactIcons](https://github.com/react-icons/react-icons)
+- **Styling:** [SCSS](https://sass-lang.com/), CSS Variables for theming
+- **Tooling:** [Vite](https://vite.dev/) build tool
+- **Linting & Formatting:** [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
+- **CI/CD:** GitHub Actions
+        `,
     },
 ]
 

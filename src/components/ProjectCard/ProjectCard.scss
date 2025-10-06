@@ -31,6 +31,10 @@
         background: rgba(0, 0, 0, 0.6);
         color: #fff;
         transition: background 0.2s;
+
+        h3 {
+            margin: 0;
+        }
     }
 
     &-title {
@@ -40,7 +44,7 @@
 
     @media (prefers-reduced-motion: reduce) {
         transition: none !important;
-        
+
         &-overlay {
             transition: none !important;
         }

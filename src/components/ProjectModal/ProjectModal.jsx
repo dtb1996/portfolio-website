@@ -3,9 +3,9 @@ import ReactMarkdown from "react-markdown"
 
 export default function ProjectModal({ project, onClose }) {
     function extractYouTubeID(url) {
-        const regExp = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/;
-        const match = url.match(regExp);
-        return match ? match[1] : null;
+        const regExp = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/
+        const match = url.match(regExp)
+        return match ? match[1] : null
     }
 
     return (
