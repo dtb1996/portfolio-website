@@ -1,58 +1,58 @@
 @use "./styles/variables.scss";
 
 :root {
-  font-family: var(--ff);
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: var(--ff);
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
+    color-scheme: light dark;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: var(--color-bg-dark);
-  color: var(--color-text);
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
 }
 
 a {
-  color: var(--color-text);
-  text-decoration: none;
-  transition: color 0.2s;
-  cursor: pointer;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
 
-  &:hover {
-      color: var(--color-primary)
-  }
+    &:hover {
+        color: var(--color-primary);
+    }
 
-  &:active {
-      filter: brightness(1.2);
-  }
+    &:active {
+        filter: brightness(1.2);
+    }
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 ul {
-  list-style-position: inside;
-  text-indent: -1.5em;
-  padding-left: 1.5em;
+    list-style-position: inside;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  a {
-    transition: none !important;
-  }
+    a {
+        transition: none !important;
+    }
 }
