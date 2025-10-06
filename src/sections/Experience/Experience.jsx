@@ -9,10 +9,7 @@ export default function Experience() {
             <h1>Experience</h1>
             <div className="experience-list">
                 {experience.map((exp) => (
-                    <div
-                        className="experience-list-entry"
-                        key={exp.id}
-                    >
+                    <div className="experience-list-entry" key={exp.id}>
                         <div className="experience-list-entry-header">
                             <h3>{exp.role}</h3>
                             <p>{exp.period}</p>

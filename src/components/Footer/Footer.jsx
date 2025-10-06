@@ -6,12 +6,22 @@ export default function Footer() {
 
     return (
         <footer className="footer">
-            <p className="footer-copyright">Copyright &copy; {currentYear} Rolling Pixels. All rights reserved.</p>
+            <p className="footer-copyright">
+                Copyright &copy; {currentYear} Rolling Pixels. All rights reserved.
+            </p>
             <div className="footer-links">
-                <a href="mailto:bellefeuilledillon@gmail.com" target="blank" rel="noopener noreferrer">
+                <a
+                    href="mailto:bellefeuilledillon@gmail.com"
+                    target="blank"
+                    rel="noopener noreferrer"
+                >
                     <FaEnvelope />
                 </a>
-                <a href="https://www.linkedin.com/in/dillon-bellefeuille/" target="blank" rel="noopener noreferrer">
+                <a
+                    href="https://www.linkedin.com/in/dillon-bellefeuille/"
+                    target="blank"
+                    rel="noopener noreferrer"
+                >
                     <FaLinkedin />
                 </a>
                 <a href="https://github.com/dtb1996" target="blank" rel="noopener noreferrer">
