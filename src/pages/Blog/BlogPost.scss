@@ -1,0 +1,64 @@
+.blog-post {
+    h1 {
+        margin-bottom: -1rem;
+    }
+
+    .content {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        margin-top: 0.5rem;
+        padding-right: 0.5rem;
+        max-width: 900px;
+        min-height: 100px;
+        width: 100%;
+        text-align: left;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        color: var(--color-text-muted);
+
+        a {
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        strong,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--color-text);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0.5rem 0;
+        }
+
+        img {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        code {
+            margin-bottom: 1rem;
+            font-family: "Fira Code", monospace;
+            font-size: 0.95rem;
+            background-color: hsl(0, 0%, 19%);
+            padding: 1rem;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+    }
+}
