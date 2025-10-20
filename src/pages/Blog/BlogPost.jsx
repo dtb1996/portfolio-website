@@ -5,6 +5,7 @@ import rehypeHighlight from "rehype-highlight"
 import fm from "front-matter"
 import "highlight.js/styles/github-dark.css"
 import "./BlogPost.scss"
+import dayjs from "dayjs"
 
 export default function BlogPost() {
     const { slug } = useParams()
@@ -34,7 +35,9 @@ export default function BlogPost() {
         <section>
             <article className="blog-post">
                 <h1>{meta.title}</h1>
-                <small>Published on {new Date(meta.date).toLocaleDateString()}</small>
+                {meta.title !== "Post not found" && (
+                    <small>Published on {dayjs(meta.date).format("MMMM D, YYYY")}</small>
+                )}
                 <div className="content">
                     <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{content}</ReactMarkdown>
                 </div>

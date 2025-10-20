@@ -51,14 +51,33 @@
             height: auto;
         }
 
-        code {
-            margin-bottom: 1rem;
+        // Inline code
+        :not(pre) > code {
             font-family: "Fira Code", monospace;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             background-color: hsl(0, 0%, 19%);
+            color: hsl(0, 0%, 95%);
+            padding: 0.15em 0.4em;
+            border-radius: 4px;
+            white-space: normal;
+        }
+
+        // Code blocks
+        pre {
+            background-color: hsl(0, 0%, 19%);
+            color: var(--color-text);
             padding: 1rem;
             border-radius: 8px;
-            white-space: pre-wrap;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow-elevation-1);
+
+            code {
+                background: none;
+                padding: 0;
+                font-size: 0.95rem;
+                white-space: pre;
+            }
         }
     }
 }

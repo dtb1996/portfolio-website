@@ -1,3 +1,4 @@
+import dayjs from "dayjs"
 import fm from "front-matter"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
@@ -35,7 +36,7 @@ export default function BlogList() {
                         <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                     </h2>
                     <p>{post.description}</p>
-                    <small>{new Date(post.date).toLocaleDateString()}</small>
+                    <small>{dayjs(post.date).format("MMM D, YYYY")}</small>
                 </article>
             ))}
         </section>
