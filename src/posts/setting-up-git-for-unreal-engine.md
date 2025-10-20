@@ -1,11 +1,11 @@
 ---
 title: "Setting Up Git for Unreal Engine Projects"
-date: 2025-05-21
-description: "This is the first post of my new Astro blog."
+date: "2025-05-21"
+description: "Learn how to properly set up Git for Unreal Engine projects."
 image:
-    url: ""
-    alt: ""
-tags: ["unreal engine", "git"]
+    url: "https://unsplash.com/photos/a-close-up-of-a-text-description-on-a-computer-screen-842ofHC6MaI"
+    alt: "Close-up of code on a computer screen representing Git"
+tags: ["unreal engine", "ue5", "git", "version control"]
 ---
 
 Originally posted on [Medium](https://medium.com/@bellefeuilledillon/setting-up-git-to-use-with-unreal-engine-21e171b71488)
@@ -26,7 +26,7 @@ Next, you will need a Git client installed on your machine that will allow you t
 
 To setup the git repo, navigate to the Unreal project folder, open up the Git client you installed, and initialize the new repo. With git bash on Windows just right-click and select “**Open Git Bash here**” (on Windows 11 you may need to select “Show more options”):
 
-!["Open Git Base here" option in context menu](/posts/images/setting-up-git-for-unreal-engine-01.png)
+![Open Git Base here" option in context menu](/posts/images/setting-up-git-for-unreal-engine/setting-up-git-for-unreal-engine-01.png)
 
 This will open up a terminal that will allow you to run git commands. Enter **git init** to initialize the repo:
 
@@ -47,11 +47,11 @@ Now you’ll want to create the external repo on your selected host. I am going 
 
 **Note:** it is important to setup a [.gitignore](https://git-scm.com/docs/gitignore) file to let git know what files to ignore (very useful with Unreal projects), which can be done during this step. I’ll choose the UnrealEngine template:
 
-![Creating a new repository on GitHub](/posts/images/setting-up-git-for-unreal-engine-02.png)
+![Creating a new repository on GitHub](/posts/images/setting-up-git-for-unreal-engine/setting-up-git-for-unreal-engine-02.png)
 
 With the new repo created on GitHub, we can now link our local project repo. Let’s grab the link from the repo page by selecting the green “Code” button and copying the link (I’m using the HTTPS link here but there are other options):
 
-![Cloning a GitHub repo](/posts/images/setting-up-git-for-unreal-engine-03.png)
+![Cloning a GitHub repo](/posts/images/setting-up-git-for-unreal-engine/setting-up-git-for-unreal-engine-03.png)
 
 Now in the git terminal we can use **git remote add origin <remote_repo>**, replacing **<remote_repo>** with the link we just copied. (Note, you will need to Right-Click then select **Paste** to paste the link, as git bash does not support the **Ctrl+v** shortcut):
 
@@ -73,7 +73,7 @@ origin  https://github.com/dtb1996/GitTutorial.git (push)
 
 With the connection established, we can now pull down the .gitignore we created earlier as well as any other files, such as a [README](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes), that have already been added to the GitHub repo. To do this enter **git pull origin <branch_name>** replacing **<branch_name>** with the branch name listed in GitHub (traditionally this has been **master**, but many developers have switched over to **main**, which is what I will be using). This can be found on the main page of the repository in GitHub:
 
-![GitHub repo branch name dropdown box](/posts/images/setting-up-git-for-unreal-engine-04.png)
+![GitHub repo branch name dropdown box](/posts/images/setting-up-git-for-unreal-engine/setting-up-git-for-unreal-engine-04.png)
 
 ```bash
 user@ComputerName MINGW64 /c/UnrealProjects/GitTutorial (main)
@@ -147,7 +147,7 @@ branch 'main' set up to track 'origin/main'.
 
 Now the local and remote are synced up, and you should see the commit listed in the remote repo:
 
-![Commits in GitHub repo](/posts/images/setting-up-git-for-unreal-engine-05.png)
+![Commits in GitHub repo](/posts/images/setting-up-git-for-unreal-engine/setting-up-git-for-unreal-engine-05.png)
 
 The commits for a particular branch can also be viewed in the bash terminal by entering **git log**:
 
