@@ -36,7 +36,9 @@ export default function BlogPost() {
             <article className="blog-post">
                 <h1>{meta.title}</h1>
                 {meta.title !== "Post not found" && (
-                    <small>Published on {dayjs(meta.date).format("MMMM D, YYYY")}</small>
+                    <small className="date">
+                        Published on {dayjs(meta.date).format("MMMM D, YYYY")}
+                    </small>
                 )}
                 <div className="content">
                     <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{content}</ReactMarkdown>
