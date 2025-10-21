@@ -5,7 +5,7 @@ description: "Learn how to use the Abstract specifier in Unreal Engine projects.
 image:
     url: ""
     alt: ""
-tags: ["unreal engine", "ue5"]
+tags: ["unreal engine", "C++", "Abstract Class"]
 ---
 
 Originally posted on [Medium](https://medium.com/@bellefeuilledillon/the-unreal-engine-abstract-uclass-specifier-43e4f2239cae)
