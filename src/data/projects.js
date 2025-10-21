@@ -235,8 +235,7 @@ A customizable and responsive React-based dashboard that brings together useful 
         link: "https://dillonbellefeuille.com/",
         video: "",
         description: `
-This is my personal developer portfolio built with **React**, designed to highlight my projects, skills, and experience.
-It features a responsive design, dark/light theme support, and a clean UI.
+This is my personal developer portfolio built with **React** and designed to highlight my projects, skills, experience, and blog posts. It features a responsive design, dark/light theme support, a clean UI, and a Markdown-based Blog section.
 
 ### Link to Repo
 
@@ -249,11 +248,13 @@ It features a responsive design, dark/light theme support, and a clean UI.
 - **Project showcase:** modal view with detailed markdown descriptions.
 - **Resume and Experience:** quick access to background and skills with the option to view or download a pdf version.
 - **Contact section:** direct links to Email and profiles on LinkedIn, GitHub, and itch.io.
+- **Blog section:** markdown-based posts with support for code block syntax highlighting using **rehype-highlight**.
 
 ## Tech Stack
 
-- **Front End:** [React](https://react.dev/), [ReactIcons](https://github.com/react-icons/react-icons)
+- **Front End:** [React](https://react.dev/), [React Router](https://reactrouter.com/), [ReactIcons](https://github.com/react-icons/react-icons)
 - **Styling:** [SCSS](https://sass-lang.com/), CSS Variables for theming
+- **Markdown & Syntax Highlight:** [react-markdown](https://github.com/remarkjs/react-markdown), [rehype-highlight](https://github.com/rehypejs/rehype-highlight)
 - **Tooling:** [Vite](https://vite.dev/) build tool
 - **Linting & Formatting:** [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
 - **CI/CD:** GitHub Actions
