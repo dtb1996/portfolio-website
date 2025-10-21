@@ -113,20 +113,20 @@ $ git add .
 
 This stages all of the changes for the next commit. Now we can enter **git commit -m “<message>”** to make a commit with all of the staged files:
 
-````bash
+```bash
 user@ComputerName MINGW64 /c/UnrealProjects/GitTutorial (main)
 $ git commit -m "Adding local unreal files to repo"
 [main 70b931f] Adding local unreal files to repo
 179 files changed, 938 insertions(+)
 ...
+```
 
 Finally, we can use **git push** to send the commit to the GitHub repo:
-
 
 ```bash
 user@ComputerName MINGW64 /c/UnrealProjects/GitTutorial (main)
 $ git push
-````
+```
 
 **Note:** if git says that the main branch has no upstream branch you can use **git push — set-upstream origin <branch>** to set the remote as upstream:
 
