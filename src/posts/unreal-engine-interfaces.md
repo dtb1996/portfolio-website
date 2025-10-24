@@ -5,7 +5,7 @@ description: "Learn how to use create and use interfaces in Blueprints and C++."
 image:
     url: ""
     alt: ""
-tags: ["unreal engine", "C++", "Blueprint", "Interfaces"]
+tags: ["Unreal Engine", "C++", "Blueprints", "Interfaces"]
 ---
 
 Originally posted on [Medium](https://medium.com/@bellefeuilledillon/interfaces-in-unreal-engine-942c0f39a91e)
