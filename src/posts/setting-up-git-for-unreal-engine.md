@@ -5,7 +5,7 @@ description: "Learn how to properly set up Git for Unreal Engine projects."
 image:
     url: "https://unsplash.com/photos/a-close-up-of-a-text-description-on-a-computer-screen-842ofHC6MaI"
     alt: "Close-up of code on a computer screen representing Git"
-tags: ["unreal engine", "git", "version control", "GitHub"]
+tags: ["Unreal Engine", "Git", "Version Control", "GitHub"]
 ---
 
 Originally posted on [Medium](https://medium.com/@bellefeuilledillon/setting-up-git-to-use-with-unreal-engine-21e171b71488)
