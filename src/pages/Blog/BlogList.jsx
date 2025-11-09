@@ -2,6 +2,7 @@ import dayjs from "dayjs"
 import fm from "front-matter"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import "./BlogList.scss"
 
 export default function BlogList() {
     const [posts, setPosts] = useState([])
@@ -31,13 +32,13 @@ export default function BlogList() {
         <section className="blog-list">
             <h1>Blog</h1>
             {posts.map((post) => (
-                <article key={post.slug}>
-                    <h2>
-                        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                    </h2>
-                    <p>{post.description}</p>
-                    <small>{dayjs(post.date).format("MMM D, YYYY")}</small>
-                </article>
+                <Link key={post.slug} to={`/blog/${post.slug}`}>
+                    <article>
+                        <h2>{post.title}</h2>
+                        <p>{post.description}</p>
+                        <small>{dayjs(post.date).format("MMM D, YYYY")}</small>
+                    </article>
+                </Link>
             ))}
         </section>
     )
