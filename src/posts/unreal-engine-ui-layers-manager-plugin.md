@@ -20,6 +20,8 @@ To solve this problem, I built a **UI Layers Manager Plugin** that was inspired 
 
 In this tutorial, I’ll break down how the system works and how to integrate it into your own project.
 
+[View the plugin on GitHub](https://github.com/dtb1996/ue5-ui-layers-manager-plugin)
+
 ## Understanding the Problem & System Design
 
 ### Why Use a UI Layer System?
@@ -200,7 +202,7 @@ Add a new class, `UILayer` of type `UUserWidget` to the plugin (`UILayer.h` goes
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "GameplayTagContainer.h"
-#include "UILayerTypes.h"
+#include "UILayersManagerSubsystem.h"
 #include "UILayer.generated.h"
 
 UCLASS(Abstract)
@@ -430,8 +432,9 @@ Create a new `ULocalPlayerSubsystem` class called `UUILayersManagerSubsystem`:
 #include "CoreMinimal.h"
 #include "Subsystems/LocalPlayerSubsystem.h"
 #include "GameplayTagContainer.h"
-#include "UILayerTypes.h"
 #include "UILayersManagerSubsystem.generated.h"
+
+DECLARE_DYNAMIC_DELEGATE_OneParam(FOnWidgetLoaded, UUserWidget*, Widget);
 
 class UUILayer;
 
