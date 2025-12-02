@@ -5,7 +5,8 @@ import thumb4 from "../assets/projects/ue5-inventory-plugin-icon.png"
 import thumb5 from "../assets/projects/lumi-snake-icon.png"
 import thumb6 from "../assets/projects/into-the-knight-icon.png"
 import thumb7 from "../assets/projects/dodgeball-x-icon.png"
-import thumb8 from "../assets/projects/web-personal-dashboard.png"
+import thumb10 from "../assets/projects/web-ecommerce-home-page.png"
+import thumb11 from "../assets/projects/web-personal-dashboard.png"
 import thumb12 from "../assets/projects/web-portfolio-website.png"
 
 const projects = [
@@ -174,9 +175,83 @@ Programmer, Designer, Music
         `,
     },
     {
-        id: 8,
+        id: 10,
+        title: "Fullstack Ecommerce Web App",
+        thumbnail: thumb10,
+        category: "web",
+        link: "https://dillon-ecommerce-app.netlify.app/",
+        video: "",
+        description: `
+A full-stack React + TypeScript storefront application built for scalability and maintainability. It includes a modular component system, SCSS styling, and environment variable management using both local .env files and Infisical for secure, cloud-stored secrets.
+
+### Live Demo
+
+[https://dillon-ecommerce-app.netlify.app/](https://dillon-ecommerce-app.netlify.app/)
+
+### Link to Repo
+
+[dtb1996/ecommerce-app](https://github.com/dtb1996/ecommerce-app)
+
+### Features
+
+### Frontend
+
+- **React 18 + TypeScript**
+- **SCSS Modules** for localized styling
+- **Reusable components** (Button, ProductCard, etc.)
+- **Responsive grid & mobile filters**
+- **React Context** for cart and UI state
+- **Pagination, sorting, filtering**
+- **Vite Dev Server:** fast builds and hot module reloading
+
+### Backend (Node.js + Express)
+
+- REST API hosted on **Render**
+- Supabase service role integration for secure DB access
+- Routes:
+  - /api/payment → Stripe checkout
+  - /api/user → auth profile helpers
+  - /api/image → Supabase image proxy (private bucket support)
+- CORS locked to Netlify URL
+
+### Database
+
+- **Supabase** with two tables:
+  - products_dev for local dev
+  - products_prod for production
+- Automatic environment-based table selection
+
+### Tech Stack
+
+### Frontend
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/)
+- [SCSS Modules](https://sass-lang.com/), CSS Variables
+- [React Router](https://reactrouter.com/)
+- [Netlify hosting](https://www.netlify.com/)
+
+### Backend
+
+- [Node.js](https://nodejs.org/en), [Express](https://expressjs.com/)
+- [Supabase](https://supabase.com/) for DB, Storage, and Authentication
+- [Stripe Payments](https://stripe.com/)
+- [Render hosting](https://render.com/)
+
+### Tools
+
+- [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
+- [Infisical](https://infisical.com/) for secrets
+- [Faker](https://fakerjs.dev/) for seeding mock data
+- [clsx](https://github.com/lukeed/clsx) for className management
+- [Unsplash](https://unsplash.com/) for placeholder images
+        `,
+    },
+    {
+        id: 11,
         title: "React Personal Dashboard",
-        thumbnail: thumb8,
+        thumbnail: thumb11,
         category: "web",
         link: "",
         video: "",
