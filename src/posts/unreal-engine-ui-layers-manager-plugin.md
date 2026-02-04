@@ -935,7 +935,7 @@ In the Event Graph, override `RequestAsyncLoadWidget` to handle the actual loadi
 
 And that’s the complete setup for the plugin. To use this logic in a game, just add a new `UIHUD`-derived Blueprint class and set the `LayerDefinitions` and `InitialWidgets` properties. Adjust these as needed for your specific game:
 
-![Example Layer Definitions in the Blueprint HUD class](https://miro.medium.com/v2/resize:fit:992/format:webp/1*wFv1fn5KlCsJMGH198vPYg.png)!
+![Example Layer Definitions in the Blueprint HUD class](https://miro.medium.com/v2/resize:fit:992/format:webp/1*wFv1fn5KlCsJMGH198vPYg.png)
 
 [Example Initial Widgets property set in the Blueprint HUD class](https://miro.medium.com/v2/resize:fit:974/format:webp/1*ngg_FdW_nijLjITH1UkWdQ.png)
 
