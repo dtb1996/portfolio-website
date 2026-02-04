@@ -34,9 +34,9 @@ export default function Experience() {
                         </ul>
                     </div>
                     <div className="skills-group">
-                        <h3>Web Development</h3>
+                        <h3>UI Development</h3>
                         <ul>
-                            {skills.webDev.map((skill, index) => (
+                            {skills.uiDev.map((skill, index) => (
                                 <li key={index}>{skill}</li>
                             ))}
                         </ul>
@@ -46,7 +46,7 @@ export default function Experience() {
 
             {/* View Resume Button */}
             <button className="experience-resume-button">
-                <a href="/dillon_bellefeuille_resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/dillon-bellefeuille-resume.pdf" target="_blank" rel="noopener noreferrer">
                     View Resume
                 </a>
             </button>

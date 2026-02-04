@@ -1,29 +1,29 @@
 const experience = [
     {
         id: 1,
-        role: "Programmer, Designer - Super Mini Golf (PC | Independent)",
+        role: "Founder, Game Developer - Rolling Pixels",
         period: "Jan 2025 - Present",
         description: `
--   Implemented a turn-based multiplayer system in Unreal Engine 5 with replicated player state and scoring.
--   Built a synchronized replay system replicating gameplay frames across clients.
--   Developed a dynamic level streaming system for seamless stage transitions.
--   Created a custom scoring framework with per-stage and cumulative course stats.
--   Optimized network replication flows for multiplayer readiness, replays, and score updates.
+-	Designed and implemented core gameplay systems in Unreal Engine 5 using C++ and Blueprints.
+-	Built reusable plugins and tools (replay system, UI manager).
+-	Designed multiplayer game logic including replicated player state, turn systems, and replay playback.
+-	Developed a custom Blender to Unreal content pipeline with a Python add-on and UE5 importer/validation plugin.
+-	Managed project planning, direction, and prototype iteration for a commercial-ready game.
         `,
         skills: ["Unreal Engine 5", "C++", "Blueprints", "Multiplayer/Replication"],
     },
     {
         id: 2,
-        role: "Unreal Engine UI Engineer - Canoo",
+        role: "UI Engineer (Unreal Engine, Qt) - Canoo",
         period: "Apr 2022 - Jan 2025",
         description: `
--   Used Unreal Engine to create HMI software that would be delivered for production vehicles.
--   Worked with team to develop a comprehensive set of HMI components.
--   Worked closely with UI/UX team to ensure designs were completed to spec within in Unreal Engine.
--   Collaborated with the scrum master to break down tasks and maintain the embedded software backlog.
+-	Designed and developed Qt/QML and Unreal Engine interfaces for embedded software environments, with focus on usability, clarity, and maintainability.
+-	Translated functional requirements and Figma mockups into fully implemented UI components aligned with product and UX goals.
+-	Implemented reusable UI components and layouts to support scalable interface architecture across products.
+-	Worked closely with cross-functional engineering, hardware, and UI design teams to refine requirements and ensure accuracy.
         `,
         skills: [
-            "Unreal Engine",
+            "Unreal Engine 4",
             "Visual Studio",
             "Qt/Qml",
             "C++",
@@ -54,13 +54,13 @@ const skills = {
         "Gameplay Systems (Inventory, Quest, Replay)",
         "Multiplayer Networking and Replication",
         "Physics-based mechanics",
-        "UI Engineering (UMG, Common UI, CustomWidgets)",
+        "UI Engineering (UMG, Common UI, Custom Widgets)",
     ],
-    webDev: [
+    uiDev: [
+        "Qt (QML, Custom Components)",
         "React.js (Hooks, State Management)",
         "UI/UX Engineering (Responsive Design, Accessibility)",
-        "Modern CSS (SCSS, Flexbox, Grid)",
-        "Qt (QML, Custom Components)",
+        "HTML, CSS (SCSS, Flexbox, Grid)",
     ],
 }
 
