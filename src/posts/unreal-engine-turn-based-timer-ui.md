@@ -97,7 +97,7 @@ protected:
   float AttemptRemaining = 0.0f;
 ```
 
-Here is the update header file:
+Here is the updated header file:
 
 ```cpp
 #pragma once

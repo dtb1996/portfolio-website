@@ -270,7 +270,7 @@ Let’s break down some of the properties and functions.
 ### Functions
 
 - `PushContent()`: Adds a new widget to the top of this layer. I’ve included two function overloads which will be used to async load widgets. You can choose which version you prefer.
-    - The first declaration takes a `WidgetClass`reference, which will be used in conjunction with a `BlueprintAsyncActionBase`class. This will give us an async blueprint node with both an immediate out execution pin and an `OnCompleted` execution pin along with the spawned `Widget` reference.
+    - The first declaration takes a `WidgetClass` reference, which will be used in conjunction with a `BlueprintAsyncActionBase` class. This will give us an async blueprint node with both an immediate out execution pin and an `OnCompleted` execution pin along with the spawned `Widget` reference.
     - The second declaration allows us to provide an optional callback function/event that fires once the widget has loaded.
 - `PopContent()`: Removes the top widget from the stack. Can be used when closing menus or going back to a previous screen.
 - `ClearStack()`: Removes all widgets from this layer.
