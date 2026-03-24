@@ -670,7 +670,7 @@ Create a new `AHUD` class named `UIHUD`, which will be used to initialize the UI
 class UUILayer;
 
 UCLASS(Abstract)
-class AUIHUD : public AHUD
+class UILAYERSMANAGER_API AUIHUD : public AHUD
 {
   GENERATED_BODY()
 
