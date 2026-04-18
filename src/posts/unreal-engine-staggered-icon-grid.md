@@ -449,7 +449,7 @@ To show an example of where I am using this grid material, here’s a few in-pro
 
 ![Example menu screenshot #2](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*yHCTaD_BEatHLMYK-VMxWQ.png)
 
-The icon background is pushed to its own layer with the menu content widget on a layer on top. Check out my [UI Layers Manager Plugin](https://medium.com/@bellefeuilledillon/ue5-ui-layers-manager-plugin-4e58034e2e95) tutorial if you’d like to see how I set that up.
+The icon background is pushed to its own layer with the menu content widget on a layer on top. Check out my [UI Layers Manager Plugin](unreal-engine-ui-layers-manager-plugin) tutorial if you’d like to see how I set that up.
 
 The coloring is done using an overlay instead of the `BackgroundColor` and `IconColor` parameters. Everything under the color overlay is in grayscale. For my UI that was easier than setting the color for each component on the screen individuals.
 
@@ -461,4 +461,4 @@ With a relatively simple material setup, this staggered icon grid material provi
 
 [Gamepad icon created by sonnycandra — Flaticon](https://www.flaticon.com/free-icons/game-boy-advance)
 
-[Golf Hole icon by Eucalyp](https://www.freepik.com/icon/golf-hole_5492044#fromView=search&page=3&position=72&uuid=e623434f-59e3-48c7-83c4-f73842f4cbfb)
+[Golf Hole icon by Eucalyp — Freepik](https://www.freepik.com/icon/golf-hole_5492044#fromView=search&page=3&position=72&uuid=e623434f-59e3-48c7-83c4-f73842f4cbfb)
